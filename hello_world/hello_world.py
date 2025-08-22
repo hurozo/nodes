@@ -30,7 +30,7 @@ def register_loop():
     payload = {"name": NODE_NAME, "inputs": NODE_INPUTS, "outputs": NODE_OUTPUTS}
     while True:
         try:
-            res = requests.post(url, json=payload, headers=headers, timeout=5)
+            res = requests.post(url, json=payload, headers=headers, timeout=60)
             data = res.json()
             if res.ok and "websocket_url" in data:
                 with ws_lock:
