@@ -108,9 +108,9 @@ async with websockets.connect(f"{url}?auth={token}") as ws:
 
 #### Environment variables
 
-`HUROZO_TOKEN` — API token for your user (Bearer token).
-`HUROZO_API_URL` — API base (defaults to https://app.hurozo.com). Change to https://staging.hurozo.com for development setups
-`NODE_NAME` — optional; default ws_hello.
+- `HUROZO_TOKEN` — API token for your user (Bearer token).
+- `HUROZO_API_URL` — API base (defaults to https://app.hurozo.com). Change to https://staging.hurozo.com for development setups
+- `NODE_NAME` — optional; default ws_hello.
 
 ### Common errors
 - `Missing or invalid name` — you sent an empty name or it contained “/”. Fix your name.
