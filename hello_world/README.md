@@ -1,6 +1,7 @@
 # Hurozo Remote Node example: Hello World
 
 This example demonstrates how to implement a remote node that communicates with Hurozo. The example script is named `hello_world.py` and showcases how a node can register itself, listen for incoming execution requests, and send back outputs.
+There is also a Go version `hello_world.go`
 
 ## Environment Variables
 Set the following environment variables before running the script:
