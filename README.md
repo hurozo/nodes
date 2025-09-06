@@ -11,6 +11,39 @@ A remote node lets a graph running in your backend call into out‑of‑process 
 
 The "Hello World" worker in this repo demonstrates the remote half of the handshake: it registers + keeps a WebSocket connection, listens for events matching its `NODE_NAME`, computes outputs, and sends them back.
 
+### Running a remote node with the Hurozo Python package
+
+Building and running remote node with the Hurozo python package is straightforward:
+
+```
+pip install hurozo
+export HUROZO_API_KEY=... your API key...
+```
+
+Example node:
+
+```
+from hurozo import Node
+
+def my_amazing_node(name):
+    outputs = {
+        'greeting': f'Gwuaaak {name}',
+        'shout': f'GWUAAAAK {name.upper()}'
+    }
+    return outputs
+
+def main():
+    Node(my_amazing_node, {
+        'inputs': ['name'],
+        'outputs': ['greeting', 'shout']
+    })
+
+if __name__ == '__main__':
+    main()
+```
+
+When you run this script your node will register in Hurozo and you can use it as a component to build your agents.
+
 ### High-level end‑to‑end architecture
 
 ###### Registration (HTTP)
