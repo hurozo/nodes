@@ -17,7 +17,7 @@ Building and running remote node with the Hurozo python package is straightforwa
 
 ```
 pip install hurozo
-export HUROZO_API_KEY=... your API key...
+export HUROZO_API_TOKEN=... your API key...
 ```
 
 Example node:
