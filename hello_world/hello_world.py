@@ -1,6 +1,6 @@
-from hurozo import Node
+from hurozo import RemoteAgent
 
-def my_amazing_node(name):
+def my_remote_agent(name):
     outputs = {
         'greeting': f'Gwuaaak {name}',
         'shout': f'GWUAAAAK {name.upper()}'
@@ -8,7 +8,7 @@ def my_amazing_node(name):
     return outputs
 
 def main():
-    Node(my_amazing_node, {
+    RemoteAgent(my_amazing_node, {
         'inputs': ['name'],
         'outputs': ['greeting', 'shout']
     })
